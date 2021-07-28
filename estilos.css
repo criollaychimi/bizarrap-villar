@@ -1,0 +1,416 @@
+/*RESETEO CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*COLORPRINCIPAL rgb(102, 24, 102)*/
+/* ESTILO DEL HEADER */
+
+.header {
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+}
+
+h1  {
+    font-family: 'Press Start 2P', cursive;
+    margin: 2%;
+    font-size: 25px;
+    text-shadow:
+      0 0 7px white,
+      0 0 10px white,
+      0 0 42px rgb(104, 10, 180),
+      0 0 82px rgb(104, 10, 180),
+      0 0 92px rgb(104, 10, 180),
+      0 0 151px rgb(104, 10, 180);
+}
+
+.flexLogo {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.menu {
+    background-color: rgba(0, 0, 0, .5);
+    border: 1px solid black;
+    color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    height: auto;
+}
+
+li {
+    list-style-type: none;
+    background-color: rgb(102, 24, 102);
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 1%;
+    position: relative;
+    width: 100%;
+    font-family: 'Zen Tokyo Zoo';
+}
+
+.nav-linkClaseNueva {
+    text-decoration: none;
+    color: white !important;
+    font-size: 70%;
+    font-family: 'Zen Tokyo Zoo' !important;
+}
+
+ul ul {
+    position: absolute;
+    background-color: rgb(88, 10, 88);
+    display: none;
+    margin-top: 13%;
+    width: 100%;
+}
+
+ul li:hover ul {
+    display: block
+}
+
+body {
+    background-color: black;
+}
+/* ESTILOS GRID DE INDEX */
+
+.grid {
+    display: inline-grid;
+    background-color: transparent;
+    border: 10px solid black;
+    grid-template-areas: 
+        "espacio ultima quien"
+        "espacio ultima quien"
+        "espacio recientes recientes"
+        "espacio recientes recientes"
+    ;
+    grid-template-columns:3fr 6fr 3fr;
+    grid-template-rows: 3fr 1fr;
+    grid-column-gap: 1%;
+    grid-row-gap: 1%;
+}
+
+.gridSection0 {
+    background-color: rgba(0, 0, 0, .5);
+    border: 0,1px inset purple;
+    border-radius: 20px;
+    grid-area: espacio;
+}
+
+.gridSection1{
+    background-color: rgba(0, 0, 0, .5);
+    border: 0,1px inset purple;
+    border-radius: 20px;
+    grid-area: ultima;
+    height: 80vh;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.nickyjam {
+    margin: 5%;
+    width: 90%;
+    display: block;
+    position: relative;
+}
+
+.textoNicky {
+    margin-top: 10%;
+}
+
+.textoBiza {
+    margin-top: 20%
+}
+
+.gridSection2 {
+    background-color: rgba(0, 0, 0, .5);
+    border: 0,1px inset purple;
+    border-radius: 20px;
+    height: 80vh;
+    grid-area: quien;
+}
+
+.gridSection3 {
+    background-color: rgba(0, 0, 0, .5);
+    border: 0,1px inset purple;
+    border-radius: 20px;
+    grid-area: recientes;
+}
+
+/*FLEX DEL SECTION RECIENTES DE INDEX*/
+
+.recientes {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.article {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*MAIN*/
+
+body {
+    background-image: url("imagenes/bodybackmicpop1color.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center
+}
+h2 {
+    color: white;
+    font-size: 120%;
+    font-family: 'Zen Tokyo Zoo';
+    margin: 5%;
+    text-align: center;
+}
+
+h3 {
+    color:white;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 100%;
+    margin: 5%;
+    text-align: center;
+}
+
+p {
+    color: white;
+    margin: 5%;
+    text-align: center;
+    font-family: 'DotGothic16';
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/*MEDIA QUERIES*/
+
+@media (min-width: 481px) {
+    body {
+        background-image: url("imagenes/bodybackmicpop2.jpg");
+        background-size: cover;
+    }
+}
+
+@media (min-width:1024px) {
+    body {
+        background-image: url("imagenes/bodybackmic3.jpg");
+        background-size: cover;
+    }
+}
+
+/*ANIMACIONES, TRANSFORMACIONES Y TRANSICIONES*/
+
+.trans {
+    transition: all 0.5s;
+}
+
+.trans:hover {
+    background-image: linear-gradient(to right, purple, rgb(194, 72, 194));
+    border-top-color: yellow;
+    border-bottom-color: yellow;
+    border: solid 5px;
+    width: 120%;
+}
+
+.ampliacion {
+    transition: all 1s;
+}
+
+.ampliacion :hover {
+    border: 2px inset white;
+    width: 93%;
+    opacity: 45%;
+}
+
+/*ANIMACION LOGO*/
+/*B*/
+@keyframes b {
+
+    0% {
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+}
+
+.keyB {
+    animation-name: b;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2.5s;
+    animation-delay: 2.4s;
+}
+
+/*I*/
+
+@keyframes i {
+
+    0% {
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+}
+
+.keyI {
+    animation-name: i;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2.5s;
+    animation-delay: 2.2s;
+}
+
+/*Z*/
+
+@keyframes z {
+
+    0% {
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+}
+
+.keyZ {
+    animation-name: z;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2.5s;
+    animation-delay: 2s;
+}
+
+/*A*/
+
+@keyframes a1 {
+
+    0% {
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+}
+
+.keyA1 {
+    animation-name: a1;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2.5s;
+    animation-delay: 1.8s;
+}
+
+/*R*/
+
+@keyframes r1 {
+
+    0% {
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+}
+
+.keyR1 {
+    animation-name: r1;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2.5s;
+    animation-delay: 1.6s;
+}
+
+/*R2*/
+
+@keyframes r2 {
+
+    0% {
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+}
+
+.keyR2 {
+    animation-name: r2;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2.5s;
+    animation-delay: 1.4s;
+}
+
+/*A2*/
+
+@keyframes a2 {
+
+    0% {
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+}
+
+.keyA2 {
+    animation-name: a2;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2.5s;
+    animation-delay: 1.2s;
+}
+
+/*P*/
+
+@keyframes p {
+
+    0% {
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+}
+
+.keyP {
+    animation-name: p;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2.5s;
+    animation-delay: 1s;
+}
+
+/*MOVIMIENTO DE LA B*/
+
+@keyframes rotacion {
+    0% {}
+    99% {
+        text-shadow: 
+        0 0 7px white,
+        0 0 10px white,
+        0 0 17px white,
+        0 0 55px white,
+        0 0 42px rgb(104, 10, 180),
+        0 0 82px rgb(104, 10, 180),
+        0 0 92px rgb(104, 10, 180),
+        0 0 151px rgb(104, 10, 180);;
+    }
+    100% {
+        transform: rotate(359deg);
+        }
+}
+
+.rotacion {
+    animation-name: rotacion;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
